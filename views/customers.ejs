@@ -1,0 +1,53 @@
+<%- include('partials/header') -%>
+
+<style>
+  body {
+    background-color: rgb(222, 222, 235);
+  }
+</style>
+
+<div class="container my-5">
+
+  <h1 class="text-center mb-4" style="color: rgb(101, 102, 107); font-weight: bold;">Customers</h1>
+
+</div>
+
+<div class="container my-5">
+<table class="table table-striped table-secondary m-auto table-responsive">
+  <thead>
+    <tr class="table-dark">
+      <th scope="col">NAME</th>
+      <th scope="col">EMAIL</th>
+      <th scope="col">BALANCE</th>
+      <th scope="col">OPERATION</th>
+    </tr>
+  </thead>
+  <tbody class="fw-bold">
+    <% customersList.forEach(function(customer){%>
+      <tr class="d1">
+        <td>
+          <%= customer.name %>
+        </td>
+        <td>
+          <%= customer.email %>
+        </td>
+        <td>
+          <%= customer.amount %>
+        </td>
+        <td>
+          <a href="/customers/<%= customer.id %>">
+            <button class="btn btn-dark">View</button> </a>
+        </td>
+      </tr>
+      <% }) %>
+
+  </tbody>
+</table>
+</div>
+
+
+<footer class="text-center px-0 py-4 sticky-bottom">
+  <p>&copy 2021. Made by <b>YASHIT KUMAR</b> <br> SPARKS Foundation</p>
+</footer>
+
+  <%- include('partials/footer') -%>

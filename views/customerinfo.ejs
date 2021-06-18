@@ -1,0 +1,44 @@
+<%- include("partials/header"); -%>
+    <style>
+        body {
+            background-color: rgb(222, 222, 235);
+        }
+    </style>
+
+    <div class="customer-information">
+
+        <div class="container">
+            <div class="customer-information-inner">
+
+                <div class="card-title welcoming" style="color: #626262">
+                    <h1 class="text-center my-5 fw-bold">
+                        <%= customer.name %>'s Info
+                    </h1>
+                </div>
+
+
+                <div class="card m-auto mb-5" style="width: 18rem; color: rgb(79, 88, 128);">
+                    <img src="/img/customer1.png" alt="Card image cap" class="img-fluid">
+                    <div class="card-body">
+                        <h5 class="card-title text-center fw-bolder">
+                            <%= customer.name %>
+                        </h5>
+                        <p class="card-text fw-bold">Email: <%= customer.email %>
+                        </p>
+                        <p class="card-text fw-bold"> Amount: <%= customer.amount %>
+                        </p>
+                        <a href="/transfer" class="btn btn-secondary w-100">Transfer Money</a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="text-center px-0 py-4 sticky-bottom">
+        <p>&copy 2021. Made by <b>YASHIT KUMAR</b> <br> SPARKS Foundation</p>
+    </footer>
+
+    <%- include("partials/footer"); -%>
