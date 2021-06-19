@@ -11,7 +11,7 @@ const customerRoutes = require("./routes/customer");
 dotenv.config({ path: "./config.env" });
  
 //connecting to mongodb database
-mongoose.connect(process.env.DATABASE_LOCAL, {
+mongoose.connect(process.env.DATABASE_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
