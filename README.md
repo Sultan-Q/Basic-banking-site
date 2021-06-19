@@ -8,7 +8,7 @@
 - Bootstrap   
 - Node.js  
 - Express.js
-- MongoDB database
+- MongoDB DB
 
 
 
