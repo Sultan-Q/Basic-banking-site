@@ -10,13 +10,6 @@
 - Express.js
 - MongoDB DB
 
-
-
-
-
- 
-
-
 ## [Live Site](https://basic-banking-webapp.herokuapp.com/)
 https://basic-banking-webapp.herokuapp.com/
 
