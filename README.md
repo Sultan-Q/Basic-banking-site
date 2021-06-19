@@ -1,6 +1,6 @@
 # Basic-banking-site
 A Basic Banking System where users/customers money can be transferred to other registered customers by the admin.
-# Basic Banking System     <img align="center" width="60" height="50" src="public/img/icon1.jpg">
+# Basic Banking System     <img align="center" width="60" height="50" src="public/img/bank.jpg">
 ## A Simple Dynamic website in which adminstrator manages the customers accounts and transfers money . 
  
 - - - -
