@@ -20,4 +20,4 @@
 ## [Live Site](https://basic-banking-webapp.herokuapp.com/)
 https://basic-banking-webapp.herokuapp.com/
 
-![home_page](https://user-images.githubusercontent.com/74452458/121528647-4d9c1580-ca19-11eb-839f-a6df4e143ce8.png)
+
