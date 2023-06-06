@@ -9,10 +9,27 @@ var customerSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  amount: {
-    type: Number,
+
+  isFunder: {
+    type: Boolean,
     required: true,
+    default: false,
   },
+  isBuyer: {
+    type: String,
+    required: true,
+    default: true,
+  },
+  balance: {
+    type: mongoose.Schema.ObjectId,
+    ref: "balance",
+  }, // 1 to 1
+  // deposits: [
+  //   {
+  //     type: mongoose.Schema.ObjectId,
+  //     ref: "transaction",
+  //   },
+  // ],
 });
 
 module.exports = mongoose.model("customer", customerSchema);

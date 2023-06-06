@@ -1,17 +1,18 @@
 const mongoose = require("mongoose");
 
 const transactionSchema = mongoose.Schema({
-  sender: {
-    type: String,
-    required: true,
-  },
-  receiver: {
-    type: String,
-    required: true,
+  accountOwner: {
+    type: mongoose.Schema.ObjectId,
+    ref: "customer",
   },
   amount: {
     type: Number,
     required: true,
+  },
+  type: { type: String, enum: ["deposit", "withdraw"] },
+  balanceID: {
+    type: mongoose.Schema.ObjectId,
+    ref: "balance",
   },
 });
 

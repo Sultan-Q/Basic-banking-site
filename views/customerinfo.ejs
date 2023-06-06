@@ -1,7 +1,7 @@
 <%- include("partials/header"); -%>
     <style>
         body {
-            background-color: rgb(222, 222, 235);
+
         }
     </style>
 
@@ -12,33 +12,100 @@
 
                 <div class="card-title welcoming" style="color: #626262">
                     <h1 class="text-center my-5 fw-bold">
-                        <%= customer.name %>'s Info
+                        <%= customer.name %> 
                     </h1>
                 </div>
-
+<%= console.log( transactions ) %>
 
                 <div class="card m-auto mb-5" style="width: 18rem; color: rgb(79, 88, 128);">
-                    <img src="/img/customer1.png" alt="Card image cap" class="img-fluid">
-                    <div class="card-body">
+
+                    <div class="card-body text-center" >
                         <h5 class="card-title text-center fw-bolder">
                             <%= customer.name %>
                         </h5>
-                        <p class="card-text fw-bold">Email: <%= customer.email %>
+                        <p class="card-text fw-bold text-center" style="text-align:right"> <%= customer.email %> 
                         </p>
-                        <p class="card-text fw-bold"> Amount: <%= customer.amount %>
+                        <p class="card-text fw-bold text-center"style="text-align:right"> <%= customer.amount %> 
                         </p>
-                        <a href="/transfer" class="btn btn-secondary w-100">Transfer Money</a>
+                        <a href="/deposit" class="btn btn-secondary w-100">اجراء ايداع لهذا الحساب</a>
+                        <br>
+                        <br>
+                        <a href="#" class="btn btn-secondary w-100">اجراء سحب من  هذا الحساب</a>
                     </div>
                 </div>
 
 
             </div>
+              <div class="row">
+    <div class="col" >
+     
+             <p style="text-align:center">الايداعات</p>
+
+       <table class="table table-striped table-secondary m-auto" width="80%">
+            <thead>
+                <tr class="table-dark">
+                                        <th scope="col">تاريخ العملية</th>
+
+                    <th scope="col">المبلغ المودع</th>
+
+                </tr>
+            </thead>
+            
+            <tbody class='fw-bold'>
+               
+                                       <% transactions.forEach(function(transaction){%>
+
+                    <tr class="d1">
+ <td><%= transaction.type %></td>
+
+ <td><%= transaction.amount %></td>
+
+
+                            
+                    </tr>
+                      <% })%>
+
+            </tbody>
+        </table>
+    </div>
+    <div class="col" >
+        <p style="text-align:center">المسحوبات</p>
+
+
+       <table class="table table-striped table-secondary m-auto" width="80%">
+            <thead>
+                <tr class="table-light">
+                    <th scope="col">المبلغ المرسل</th>
+                                        <th scope="col">اسم المستلم</th>
+
+                                        <th scope="col">اسم المرسل</th>
+
+                </tr>
+            </thead>
+            
+            <tbody class='fw-bold'>
+
+                    <tr class="d1">
+                                            <td>
+                                            ٣٣٣
+                        </td>
+
+                        <td>
+                           DSASDFG
+                        </td>
+                        <td>
+                            SDFGSDFG
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+    </div>
+  </div>
         </div>
     </div>
 
 
-    <footer class="text-center px-0 py-4 sticky-bottom">
-        <p>&copy 2021. Made by <b>YASHIT KUMAR</b> <br> SPARKS Foundation</p>
-    </footer>
 
     <%- include("partials/footer"); -%>
